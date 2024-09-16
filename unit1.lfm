@@ -1,0 +1,30 @@
+object frmMenu: TfrmMenu
+  Left = 2960
+  Height = 723
+  Top = 169
+  Width = 999
+  Caption = 'Desktop webviewer'
+  ClientHeight = 723
+  ClientWidth = 999
+  DesignTimePPI = 120
+  OnShow = FormShow
+  LCLVersion = '2.2.4.0'
+  object CEFWindowParent: TCEFWindowParent
+    Left = 0
+    Height = 723
+    Top = 0
+    Width = 999
+    Align = alClient
+    TabOrder = 0
+  end
+  object Chromium: TChromium
+    OnAfterCreated = ChromiumAfterCreated
+    Left = 43
+    Top = 30
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 165
+    Top = 30
+  end
+end
